@@ -1,0 +1,89 @@
+.home-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/mohammad-alizade-4wzRuAb-KWs-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.home-page .container{
+    position: fixed;
+    z-index: 0s;
+    left:0;
+    right:0;
+    text-align: center;
+    height: fit-content;
+}
+.home-page .section-desc{
+    width:fit-content;
+    color:#EDEDED;
+    text-align: center;
+    margin:20px auto;
+}
+.home-page .section-desc .title{
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 0.5;
+}
+.home-page .section-desc .name{
+    font-size: 22px;
+    font-weight: 700;
+    line-height:1;
+    text-transform: uppercase;
+    padding:10px 0px 20px 0px;
+    letter-spacing: 20px;
+    width: fit-content;
+    margin: auto;
+}
+.home-page .section-desc .desc{
+    width:650px;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #b3b3b3;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.home-page .section-desc a{margin: auto;}
+.home-page .section-desc .btn{
+    width:fit-content;
+    height:fit-content;
+    margin:20px auto;
+    border: 1px solid #EDEDED;
+    padding:5px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s,border 0.3s;
+    font-weight: 700;
+}
+.home-page .section-desc .btn:hover{
+    background-color: #ededed00;
+    border:1px solid #EDEDED;
+    color:#EDEDED !important;
+}
+
+@media screen and (max-width:900px) {
+    .home-page .section-desc .desc{
+        width:58vw;
+    }
+}
+@media screen and (max-width:600px) {
+    .home-page .section-desc .title{
+        font-size: 10vw;
+    }
+    .home-page .section-desc .name{
+        font-size: 3.8vw;
+        letter-spacing: 3.5vw;
+    }
+    .home-page .section-desc .desc{
+        font-size:3vw;
+    }
+    .home-page .section-desc .btn{
+        font-size: 3vw;
+    }
+}

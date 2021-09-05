@@ -1,0 +1,60 @@
+.content{
+    height: 100vh;
+    background-image: url("../images/pexels-martin-damboldt-814499.jpg");
+    background-position: top;
+    background-size: cover; 
+    background-attachment: fixed;
+    position: relative;
+    background-color: #EDEDED;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.layer{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    background-color: rgba(241, 241, 241, 0);
+}
+.item{
+    width:100%;
+    height:100%;
+    padding:20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    z-index: 1000;
+    color:#EDEDED;
+    margin: auto;
+    font-size:30px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.item .desc{
+    width:60%;
+}
+.cotact-me{
+    margin:10px 0px;
+}
+.cotact-me span a{
+    cursor: pointer;
+    color:#EDEDED
+}
+.cotact-me span a:hover{
+    color:green
+}
+
+@media screen and (max-width:750px) {
+    .content{
+        height: auto;
+        padding:20vh 0
+    }
+}

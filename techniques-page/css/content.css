@@ -1,0 +1,212 @@
+/*
+Main Color
+Second Color
+*/
+
+
+.content{
+    width: 100%;
+    /* background-image: url("../../images/leon-rohrwild-Lf_k6hVizvs-unsplash.jpg");
+    background-position: center;
+    background-size:cover; */
+    position: relative;
+    background-color: #EDEDED;
+    display: grid;
+    align-items: center;
+}
+.content .container{
+    overflow: visible;
+}
+.boxElements{
+    height:100vh;
+    display: grid;
+    align-items: center;
+}
+.item-project{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+    '. imageBox'
+    '. imageBox'
+    '. imageBox'
+    'head imageBox'
+    'desc imageBox'
+    'btn imageBox'
+    '. imageBox'
+    '. imageBox'
+    '. imageBox'
+    ;
+    align-items: center;
+    gap:0 50px;
+}
+.boxElements:nth-child(2n+1) .item-project{
+    grid-template-areas:
+    'imageBox .'
+    'imageBox .'
+    'imageBox .'
+    'imageBox head'
+    'imageBox desc'
+    'imageBox btn'
+    'imageBox .'
+    'imageBox .'
+    'imageBox .'
+    ;
+}
+.head{
+    grid-area: head;
+}
+.item-project .title{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 0px;
+    font-weight: 800;
+    color: #666;
+}
+.item-project .name{
+    width: fit-content;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #444;
+
+}
+.item-project .desc{
+    grid-area: desc;
+    color: #666;
+    font-weight:600;
+    font-size: 18px;
+    width: 80%;
+
+}
+.item-project .btn{
+    grid-area: btn;
+    width: 70px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: red;
+    color: #EDEDED;
+    padding:5px 10px;
+    cursor: pointer;
+    margin:20px 2px;
+    box-shadow: 0 0 2px #333;
+    transition: width 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.btnLayer{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #EDEDED;
+    color:#333;
+    width: 20vw;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition:visibility 0.5s,opacity 0.5s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-project .btn:hover .btnLayer{
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+}
+.item-project .btn:hover{
+    width: 20vw;
+}
+.item-project .imageBox{
+    grid-area: imageBox;
+    /* width: 32.5vw;
+    height: 32.5vw; */
+    width:500px;
+    height:500px;
+    background-image: url("../images/71.jpg");
+    background-position: top left;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #333;
+    margin:0 20px;
+
+}
+@media screen and (max-width:1300px) {
+    .item-project .imageBox{
+        width: 38.5vw;
+        height: 38.5vw;
+    }
+}
+@media screen and (max-width:1050px) {
+    .boxElements{
+        height: auto;
+        padding:20vw 0 10vw 0;
+    }
+    .boxElements:nth-child(n) .item-project{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        'head head'
+        'imageBox imageBox'
+        'desc btn'
+        ;
+        align-items: center;
+    }
+    .item-project .imageBox{
+        width:79vw;
+        height:45vw;
+        margin: 40px 0;   
+    }
+    .item-project .desc{
+        width: 50vw;
+    }
+
+}
+@media screen and (max-width:650px) {
+    .boxElements:nth-child(n) .item-project{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        'head'
+        'imageBox'
+        'desc'
+        'btn'
+        ;
+        align-items: center;
+    }
+    .item-project .imageBox{
+        margin: 40px 0;   
+    }
+    .item-project .desc{
+        width: 79vw;
+    }
+    .item-project .title{
+        font-size: 10px;
+        letter-spacing: 10px;
+    }
+    .item-project .name{
+        font-size: 28px;
+    }
+    .item-project .desc{
+        font-size: 16px;
+    }
+    .item-project .btnLayer,
+    .item-project .btn:hover{
+        width: 79vw;
+    }
+}
+@media screen and (max-width:350px){
+    .item-project .title{
+        font-size: 1vw;
+        letter-spacing: 10px;
+    }
+    .item-project .name{
+        font-size: 8vw;
+    }
+    .item-project .desc{
+        font-size: 4.5vw;
+    }
+}

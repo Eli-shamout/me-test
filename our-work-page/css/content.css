@@ -1,0 +1,163 @@
+.content{
+    width: 100%;
+    /* background-image: url("../../../images/leon-rohrwild-Lf_k6hVizvs-unsplash.jpg");
+    background-position: center;
+    background-size:cover; */
+    position: relative;
+    background-color: #EDEDED;
+}
+
+
+
+.item-project{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-areas: 'info''view';
+    align-items: center;
+    margin:20vh 0;
+}
+
+.info{
+    grid-area: info;
+    display: grid;
+    grid-template-areas: 'name title''desc desc';
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin:0px 0 5vh 0;
+}
+
+.info .title{
+    grid-area: title;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:#777;
+    line-height: 1;
+    text-align: right;
+}
+.info .name{
+    grid-area: name;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:#444
+}
+.info .desc{
+    grid-area: desc;
+    font-size: 18px;
+    font-weight: 500;
+    margin:20px 0 0 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color:#666
+}
+
+.view{
+    width: 100%;
+    grid-area: view;
+    display: grid;
+    grid-template-areas: 'large-device medium-device small-device';
+    align-items: center;
+    justify-content: space-between;
+}
+.view div{
+    margin:0px 0 2vw 0 !important;
+    cursor: grab;
+}
+.view .large-device{
+    grid-area: large-device;
+    width:35.8vw;
+    height:23vw;
+    /* background-image: url("../images/gentium-designer-website-template.png"); */
+    background-position: top;
+    background-size: cover;
+    margin:0;
+}
+.view .medium-device{
+    grid-area: medium-device;
+    width:21.5vw;
+    height:23vw;
+    /* background-image: url("../images/gentium-designer-website-template.png"); */
+    background-position: top;
+    background-size: cover;
+}
+.view .small-device{
+    grid-area: small-device;
+    width:15vw;
+    height:23vw;
+    /* background-image: url("../images/gentium-designer-website-template.png"); */
+    background-position: top;
+    background-size: cover;
+}
+.btn{
+    font-size: 20px;
+    padding:2px 20px;
+    background-color: #333;
+    border: 2px solid #444;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    font-weight: 700;
+    color:#EDEDED;
+    transition: background-color 0.3s,color 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #EDEDED;
+    color:#333;
+
+}
+@media screen and (max-width:900px) {
+    .item-project{
+        height:fit-content;
+    }
+    .info{
+        grid-area: info;
+        display: grid;
+        grid-template-areas: 'name''title''desc';
+        align-items: center;
+        width: 100%;
+        margin:0px 0 5vh 0;
+    }
+    .info .title{
+        text-align: left;
+    }
+    .view{
+        grid-template-areas: 'large-device large-device' 'medium-device small-device';
+        justify-content: center !important;
+        justify-items: start;
+    }
+    .view div{margin:0px 2vw 2vw auto !important;}
+    .view .large-device{
+        width:76vw;
+        height:50vw;
+    }
+    .view .medium-device{
+        width:47vw;
+        height:50vw;
+    }
+    .view .small-device{
+        width:27vw;
+        height:50vw;
+    }
+    .btn{
+        margin:30px auto 0 auto;
+    } 
+}
+
+@media screen and (max-width:400px) {
+    .info .title{
+        font-size: 4.5vw;
+    }
+    .info .name{
+        font-size: 7.5vw;
+    }
+    .info .desc{
+        font-size: 4.5vw;
+        margin:20px 0 0 0;
+    }
+}
