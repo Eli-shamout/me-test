@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+:root{
+    --MainColor:#333;
+    --SecondColor:#444;
+    --ThirdColor:#666;
+}
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: black;
+}
+.container{
+    width: 80%;
+    margin:auto;
+    overflow: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color: initial;
+    text-decoration: none;
+}
+
+.section-desc{
+    width:400px;
+    color:#EDEDED;
+}
+.section-desc .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.section-desc .name{
+    font-size: 60px;
+    font-weight: 500;
+    line-height:1;
+    text-transform: uppercase;
+    padding:10px 0px;
+    letter-spacing: 2px;
+}
+.section-desc .desc{
+    line-height: 1.8;
+    font-size: 18px;
+    color: #b3b3b3;
+    width:300px;
+}
+.section-desc a{
+    width: fit-content;
+    display: block;
+}
+.section-desc .btn{
+    width:75px;
+    height:30px;
+    background-color: #C6070E;
+    border-radius: 3px;
+    color: #EDEDED;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin:20px 0px 0px 0px;
+    border: 0.01px solid #EDEDED;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+.hover-btn{
+    width: 300px;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0.5s,opacity 0.5s;
+    text-transform: capitalize;
+    text-align: center;
+}
+.section-desc .btn:hover{
+    width: 300px;
+}
+.section-desc .btn:hover .hover-btn{
+    visibility: visible;
+    opacity: 1;
+}
+
+

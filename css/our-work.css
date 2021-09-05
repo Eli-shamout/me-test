@@ -1,0 +1,59 @@
+.our-work{
+    width: 100%;
+    height:100vh;
+    margin:0px 0px 0px 0px;
+    display: grid;
+    grid-template-areas:'work-image section-desc';
+    align-items: center;
+    justify-content: center;
+    grid-gap:40px;
+}
+.work-image{
+    width:650px;
+    height:450px;
+    overflow: hidden;
+    grid-area:work-image;
+    background-image: url("../images/gentium-designer-website-template.png");
+    background-position: top;
+    background-size: cover;
+}
+.work-image img{width: 100%;}
+
+@media screen and (max-width:1370px) {
+    .our-work{
+        width: 100%;
+        height:100vh;
+        margin:0px 0px 0px 0px;
+        display: grid;
+        grid-template-areas:'work-image''section-desc';
+        align-items: center;
+        justify-content: center;
+        grid-gap:40px;
+    }
+    .work-image{
+        width:650px;
+        height:450px;
+        overflow: hidden;
+        grid-area:work-image;
+    }
+    .work-image img{width: 100%;}
+}   
+@media screen and (max-width:850px){
+    .our-work{
+        width: 100%;
+        height:fit-content;
+        margin:0px 0px 0px 0px;
+        display: grid;
+        grid-template-areas:'work-image''section-desc';
+        align-items: center;
+        justify-content: center;
+        grid-gap:40px;
+    }
+    .work-image{
+        width:73vw;
+        height:50vw;
+        overflow: hidden;
+        grid-area:work-image;
+    }
+    .work-image img{width: 100%;}
+}
